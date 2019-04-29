@@ -1,0 +1,1276 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Александр Прокудин <alexandre.prokoudine@gmail.com>, 2011, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GIMP Plugin Astronomy 0.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-07 11:50+0200\n"
+"PO-Revision-Date: 2012-09-06 08:54+0400\n"
+"Last-Translator: Александр Прокудин <alexandre.prokoudine@gmail.com>\n"
+"Language-Team: русский <>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2); 10<=4 && (n%100<10 || n"
+"%100>=20) ? 1 : 2);\n"
+
+#: ../src/alignment.c:224
+msgid "Move and rotate layers so that they overlap correctly"
+msgstr "Переместить и повернуть слои так, чтобы они точно совместились"
+
+#: ../src/alignment.c:225
+msgid "This plug-in translates and rotates layers so they fit best."
+msgstr ""
+"Это дополнение перемещает и вращает слои так, чтобы они лучше совпадали"
+
+#: ../src/alignment.c:229 ../src/alignment.c:1590
+msgid "Align Layers"
+msgstr "Выровнять слои"
+
+#: ../src/alignment.c:237 ../src/merge.c:177 ../src/background_gradient.c:170
+#: ../src/artificial_stars.c:370 ../src/artificial_galaxy.c:491
+#: ../src/star_rounding.c:186
+msgid "<Image>/Filters/Astronomy"
+msgstr "<Image>/Filters/Астрономия"
+
+#: ../src/alignment.c:873 ../src/alignment.c:1064
+msgid "Invalid color type!"
+msgstr "Некорректный тип цвета!"
+
+#: ../src/alignment.c:1138 ../src/alignment.c:1283
+msgid "Align Layers..."
+msgstr "Выровнять слои..."
+
+#: ../src/alignment.c:1219 ../src/alignment.c:1482
+msgid "Moving layers by estimated values..."
+msgstr "Слои перемещаются на рассчитанные значения..."
+
+#. Calculate the "quality" always in the same way. Contrast?
+#: ../src/alignment.c:1222 ../src/alignment.c:1240 ../src/alignment.c:1483
+#: ../src/alignment.c:1501
+#, c-format
+msgid "Quality: %.5f"
+msgstr "Качество: %.5f"
+
+#: ../src/alignment.c:1245 ../src/alignment.c:1506
+msgid "Requested invalid move values. Not moving layer!"
+msgstr ""
+
+#: ../src/alignment.c:1290
+msgid "Please select another area for de-rotating layers."
+msgstr ""
+
+#: ../src/alignment.c:1367
+msgid "Rotating layers by estimated values..."
+msgstr "Слои вращаются на рассчитанные значения..."
+
+#. Generic settings
+#: ../src/alignment.c:1601 ../src/merge.c:987
+msgid "General Settings"
+msgstr "Общие параметры"
+
+#: ../src/alignment.c:1613
+msgid "Scale before processing (%):"
+msgstr "Увеличить перед обработкой (%):"
+
+#: ../src/alignment.c:1615
+msgid "Scale layers before processing"
+msgstr "Масштабировать слои перед обработкой"
+
+#. visible layers ?
+#: ../src/alignment.c:1620 ../src/merge.c:998
+msgid "Use visible layers only"
+msgstr "Использовать только видимые слои"
+
+#. remove invisible layers ?
+#: ../src/alignment.c:1627
+msgid "Remove invisible layers"
+msgstr "Удалить невидимые слои"
+
+#. trim image ?
+#: ../src/alignment.c:1634
+msgid "Trim image to overlap area"
+msgstr "Обрезать изображение по области пересечения"
+
+#. two star alignment ?
+#: ../src/alignment.c:1641
+msgid "Two star alignment"
+msgstr "Выравнивание по двум звёздам"
+
+#. alignment methods + settings
+#: ../src/alignment.c:1648
+msgid "Alignment Method"
+msgstr "Способ выравнивания"
+
+#: ../src/alignment.c:1660
+msgid "Gauss fit"
+msgstr "Аппроксимация по Гауссу"
+
+#: ../src/alignment.c:1661
+msgid "Center of brightness"
+msgstr "Центр яркости"
+
+#: ../src/alignment.c:1662
+msgid "Cross correlation"
+msgstr "Взаимная корреляция"
+
+#: ../src/alignment.c:1663
+msgid "Cross correlation (FFT)"
+msgstr "Взаимная корреляция (FFT)"
+
+#: ../src/alignment.c:1667
+msgid "Center of brightness mean value's radius (px):"
+msgstr "Радиус радиуса среднего значения яркости (px):"
+
+#: ../src/alignment.c:1669
+msgid "Search radius, limited by the layer's border"
+msgstr "Радиус поиска, ограниченный границами слоя"
+
+#: ../src/alignment.c:1674
+msgid "Cross correlation search area (%):"
+msgstr "Область поиска взаимной корреляции (%):"
+
+#: ../src/alignment.c:1676
+#, c-format
+msgid ""
+"Cross correlation search area, measured in % of selected area width/height "
+"and limited by the layer's border"
+msgstr ""
+
+#: ../src/alignment.c:1683
+msgid "Subpixel resolution when using cross correlation"
+msgstr "Использовать субпиксельное разрешение при взаимной корреляции"
+
+#: ../src/merge.c:164
+msgid "Merge layers using different mean value algorithms"
+msgstr ""
+"Это дополнение объединяет слои используя различные алгоритмы вычисления "
+"среднего значения"
+
+#: ../src/merge.c:165
+msgid "This plug-in merges layers using different mean value algorithms. "
+msgstr ""
+"Это дополнение объединяет слои используя различные алгоритмы вычисления "
+"среднего значения"
+
+#: ../src/merge.c:169 ../src/merge.c:962
+msgid "Merge Layers"
+msgstr "Объединить слои"
+
+#: ../src/merge.c:721
+msgid "Merge Layers..."
+msgstr "Объединить слои..."
+
+#: ../src/merge.c:800 ../src/merge.c:1017
+msgid "Arithmetic mean"
+msgstr "Среднее арифметическое"
+
+#: ../src/merge.c:803 ../src/merge.c:1018
+msgid "Geometric mean"
+msgstr "Cреднее геометрическое"
+
+#: ../src/merge.c:806 ../src/merge.c:1019
+msgid "Median"
+msgstr "Медиана"
+
+#: ../src/merge.c:809
+msgid "Sigma median / arithmetic"
+msgstr ""
+
+#: ../src/merge.c:812
+msgid "Sigma median (1 pass)"
+msgstr ""
+
+#: ../src/merge.c:815
+msgid "Sigma median (2 passes)"
+msgstr ""
+
+#. Merge methods + settings
+#: ../src/merge.c:1006
+msgid "Merge Method (Mean Value)"
+msgstr "Способ объединения (среднее значение)"
+
+#: ../src/merge.c:1020
+msgid "Arithmetic mean of X sigma around median"
+msgstr "Среднее арифметическое сигмы X вокруг медианы"
+
+#: ../src/merge.c:1021
+msgid "Median of X sigma around median (1 pass)"
+msgstr "Медиана сигмы X вокруг медианы (1 проход)"
+
+#: ../src/merge.c:1022
+msgid "Median of X sigma around median (2 passes)"
+msgstr "Медиана сигмы X вокруг медианы (1 прохода)"
+
+#: ../src/merge.c:1034 ../src/artificial_stars.c:2060
+#: ../src/artificial_galaxy.c:1661 ../src/artificial_galaxy.c:1687
+#: ../src/artificial_galaxy.c:1713 ../src/artificial_galaxy.c:1739
+#: ../src/artificial_galaxy.c:1867 ../src/artificial_galaxy.c:1893
+#: ../src/artificial_galaxy.c:1919 ../src/artificial_galaxy.c:1945
+msgid "Sigma:"
+msgstr "Сигма:"
+
+#: ../src/merge.c:1036
+msgid ""
+"Clip X sigma around median (unused for arithmetic/geometric mean or median)"
+msgstr ""
+
+#. Preprocess values
+#: ../src/merge.c:1042
+msgid "Preprocess Pixel Values Before Merging"
+msgstr "Предварительная обработка пикселов перед объединением"
+
+#: ../src/merge.c:1054
+msgid "Multiply:"
+msgstr "Умножить:"
+
+#: ../src/merge.c:1056
+msgid "Multiply each pixel value with this constant before processing"
+msgstr "Умножить каждое значения пиксела на эту константу перед обработкой"
+
+#: ../src/merge.c:1063
+msgid "Add a constant:"
+msgstr "Добавить константу:"
+
+#: ../src/merge.c:1065
+msgid "Add this constant to each pixel value before processing"
+msgstr "Добавить эту константу в каждую точку растра перед обработкой"
+
+#: ../src/background_gradient.c:157
+msgid "Create a layer containing the background for an artificial flat field"
+msgstr ""
+
+#: ../src/background_gradient.c:158
+msgid ""
+"This plug-in tries to fit a polynomial of order 4 through the background "
+"pixel values."
+msgstr ""
+"Это дополнение пытается подобрать многочлен четвёртого порядка через "
+"значения фоновых точек растра."
+
+#: ../src/background_gradient.c:162 ../src/background_gradient.c:787
+msgid "Background Gradient"
+msgstr "Фоновый градиент"
+
+#: ../src/background_gradient.c:434
+msgid "Background gradient"
+msgstr "Фоновый градиент"
+
+#: ../src/background_gradient.c:464
+msgid "Calculating mean values for pivotal points..."
+msgstr "Выполняется расчёт средних значений через точки вращения..."
+
+#: ../src/background_gradient.c:573
+msgid "Too few pivotal points found!"
+msgstr "Найдено слишком мало точек вращения!"
+
+#: ../src/background_gradient.c:585
+msgid "Fitting polynomial and calculating maximum pixel values..."
+msgstr ""
+"Выполняется подбор многочлена и расчёт максимальных значений точек растра..."
+
+#: ../src/background_gradient.c:672
+msgid "Writing normalized pixel values..."
+msgstr "Пишутся нормированные значения точек растра..."
+
+#. Box width
+#: ../src/background_gradient.c:805
+msgid "Box width:"
+msgstr "Ширина области:"
+
+#. Box height
+#: ../src/background_gradient.c:818
+msgid "Box height:"
+msgstr "Высота области:"
+
+#: ../src/background_gradient.c:839
+msgid "Iterations of sigma clipping:"
+msgstr "Итераций ограничения по сигме:"
+
+#: ../src/background_gradient.c:859
+msgid "Sigma clipping:"
+msgstr "Ограничение по сигме:"
+
+#: ../src/background_gradient.c:861
+msgid "Clip values inside the box by ... sigma"
+msgstr ""
+
+#: ../src/background_gradient.c:867
+msgid "Min number of non-clipping values:"
+msgstr "Мин. число неудаляемых значений:"
+
+#: ../src/background_gradient.c:869
+msgid "Minimum number of values that do not clip inside the box"
+msgstr ""
+
+#: ../src/background_gradient.c:882
+msgid "All values"
+msgstr "Все значения"
+
+#: ../src/background_gradient.c:883
+msgid "Darkest values"
+msgstr "Самые тёмные"
+
+#: ../src/background_gradient.c:884
+msgid "Brightest values"
+msgstr "Самые яркие"
+
+#: ../src/background_gradient.c:894 ../src/star_rounding.c:768
+#: ../src/star_rounding.c:845
+msgid "Percentage:"
+msgstr "Процент:"
+
+#: ../src/artificial_stars.c:357
+msgid "Create an artificial star distribution"
+msgstr "Создать искусственное распределение звёзд"
+
+#: ../src/artificial_stars.c:358
+msgid "This plug-in creates an artificial star distribution. "
+msgstr "Это дополнение создаёт распределение искусственных звёзд"
+
+#: ../src/artificial_stars.c:362 ../src/artificial_stars.c:1653
+msgid "Artificial Stars"
+msgstr "Искусственные звёзды"
+
+#: ../src/artificial_stars.c:472
+msgid ""
+"Do you want to recalculate the star distribution before actually drawing the "
+"stars?"
+msgstr "Вы хотите заново рассчитать распределение звёзд перед визуализацией?"
+
+#: ../src/artificial_stars.c:541
+msgid "Creating background star distribution"
+msgstr "Создаётся распределение звёзд на заднем плане"
+
+#: ../src/artificial_stars.c:547
+msgid "Creating object star distribution"
+msgstr "Создаётся распределение основных звёзд"
+
+#: ../src/artificial_stars.c:553
+msgid "Creating foreground star distribution"
+msgstr "Создаётся распределение звёзд на переднем плане"
+
+#: ../src/artificial_stars.c:565 ../src/artificial_stars.c:1393
+#: ../src/artificial_stars.c:1696 ../src/artificial_galaxy.c:1141
+#: ../src/artificial_galaxy.c:2187
+msgid "Recalculate distribution"
+msgstr "Пересчитать распределение"
+
+#: ../src/artificial_stars.c:584
+msgid "Sorting stars by brightness"
+msgstr "Сортировка звёзд по яркости..."
+
+#: ../src/artificial_stars.c:1073 ../src/artificial_galaxy.c:1378
+msgid "Creating background..."
+msgstr "Создаётся фон..."
+
+#: ../src/artificial_stars.c:1100
+msgid "Creating background stars..."
+msgstr "Создаются звёзды на фоне"
+
+#: ../src/artificial_stars.c:1110
+msgid "Creating object stars..."
+msgstr "Создаются основные звёзды..."
+
+#: ../src/artificial_stars.c:1120
+msgid "Creating foreground stars..."
+msgstr "Создаются звёзды на переднем плане..."
+
+#: ../src/artificial_stars.c:1130 ../src/artificial_galaxy.c:1440
+msgid "Creating noise..."
+msgstr "Создаётся шум..."
+
+#: ../src/artificial_stars.c:1136 ../src/artificial_galaxy.c:1446
+msgid "Writing normalized values to buffer..."
+msgstr "Нормированные значения пишутся в буфер..."
+
+#: ../src/artificial_stars.c:1178
+msgid "Artificial background stars"
+msgstr "Звёзды на заднем плане"
+
+#: ../src/artificial_stars.c:1193
+msgid "Artificial object stars"
+msgstr "Основные звёзды"
+
+#: ../src/artificial_stars.c:1208
+msgid "Artificial foreground stars"
+msgstr "Звёзды на переднем плане"
+
+#: ../src/artificial_stars.c:1225
+msgid "Artificial stars"
+msgstr "Искусственные звёзды"
+
+#: ../src/artificial_stars.c:1384 ../src/artificial_galaxy.c:2178
+msgid "Cancel recalculation"
+msgstr "Отменить повторный расчёт"
+
+#. Star distribution (left side)
+#: ../src/artificial_stars.c:1686
+msgid "Star Distribution"
+msgstr "Распределение звёзд"
+
+#. Sample Distributions
+#: ../src/artificial_stars.c:1718
+msgid "Sample Distributions"
+msgstr "Предустановки распределений"
+
+#: ../src/artificial_stars.c:1729
+#, fuzzy
+msgid "Standard (high density)"
+msgstr "Обычное (ВП)"
+
+#: ../src/artificial_stars.c:1730
+#, fuzzy
+msgid "Standard (low density)"
+msgstr "Обычное (ВП)"
+
+#: ../src/artificial_stars.c:1731
+#, fuzzy
+msgid "Globular cluster (high density)"
+msgstr "Шаровидное скопление (ВП)"
+
+#: ../src/artificial_stars.c:1732
+#, fuzzy
+msgid "Globular cluster (low density)"
+msgstr "Шаровидное скопление (ВП)"
+
+#: ../src/artificial_stars.c:1733
+#, fuzzy
+msgid "Open cluster (high density)"
+msgstr "Рассеянное скопление (ВП)"
+
+#: ../src/artificial_stars.c:1734
+#, fuzzy
+msgid "Open cluster (low density)"
+msgstr "Рассеянное скопление (ВП)"
+
+#: ../src/artificial_stars.c:1742
+msgid "Apply"
+msgstr ""
+
+#: ../src/artificial_stars.c:1758
+msgid "_Distribution Options"
+msgstr "Пара_метры распределения"
+
+#: ../src/artificial_stars.c:1761
+msgid "Background Stars"
+msgstr "Звёзды на заднем плане"
+
+#: ../src/artificial_stars.c:1771 ../src/artificial_stars.c:1841
+#: ../src/artificial_stars.c:1966
+msgid "Amount:"
+msgstr "Количество:"
+
+#: ../src/artificial_stars.c:1782 ../src/artificial_stars.c:1852
+#: ../src/artificial_stars.c:1977
+msgid "Brightness mean:"
+msgstr "Ср. арифм. яркости:"
+
+#: ../src/artificial_stars.c:1793 ../src/artificial_stars.c:1863
+#: ../src/artificial_stars.c:1988
+msgid "Brightness sigma:"
+msgstr "Сигма яркости:"
+
+#: ../src/artificial_stars.c:1804 ../src/artificial_stars.c:1874
+#: ../src/artificial_stars.c:1999
+msgid "Color mean:"
+msgstr "Ср. арифм. цвета:"
+
+#: ../src/artificial_stars.c:1815 ../src/artificial_stars.c:1885
+#: ../src/artificial_stars.c:2010
+msgid "Color sigma:"
+msgstr "Сигма цвета:"
+
+#: ../src/artificial_stars.c:1827
+msgid "Object Stars"
+msgstr "Основные звёзды"
+
+#: ../src/artificial_stars.c:1897
+msgid "Object center: X:"
+msgstr "Центра объекта по X:"
+
+#: ../src/artificial_stars.c:1909
+msgid "Y:"
+msgstr "Y:"
+
+#: ../src/artificial_stars.c:1926
+msgid "Density profile:"
+msgstr "Расчёт плотности:"
+
+#: ../src/artificial_stars.c:1933
+msgid "Random"
+msgstr "Случайным образом"
+
+#: ../src/artificial_stars.c:1934 ../src/artificial_stars.c:2046
+msgid "Gauss"
+msgstr "По Гауссу"
+
+#: ../src/artificial_stars.c:1935
+msgid "Plummer"
+msgstr "По Пламмеру"
+
+#: ../src/artificial_stars.c:1946
+msgid "Radius parameter:"
+msgstr "Радиус:"
+
+#: ../src/artificial_stars.c:1948
+#, c-format
+msgid "Radius of object in % of the image (unused for random distribution)"
+msgstr ""
+"Радиус объекта в процентном отношении от изображения. При случайном "
+"распределении это значение не используется."
+
+#: ../src/artificial_stars.c:1956
+msgid "Foreground Stars"
+msgstr "Звёзды на переднем плане"
+
+#: ../src/artificial_stars.c:2026
+msgid "R_endering"
+msgstr "От_рисовка"
+
+#: ../src/artificial_stars.c:2029
+msgid "Options"
+msgstr "Параметры"
+
+#: ../src/artificial_stars.c:2039
+msgid "PSF:"
+msgstr "Функция распределения (PSF):"
+
+#: ../src/artificial_stars.c:2045
+msgid "Delta peak"
+msgstr "Дельта-пик"
+
+#: ../src/artificial_stars.c:2047
+msgid "Gauss with 4 diffraction lines"
+msgstr "По Гауссу с 4 дифракционными линиями"
+
+#: ../src/artificial_stars.c:2048
+msgid "Gauss with 6 diffraction lines"
+msgstr "По Гауссу с 6 дифракционными линиями"
+
+#: ../src/artificial_stars.c:2049
+msgid "Gauss with 12 diffraction lines"
+msgstr "По Гауссу с 12 дифракционными линиями"
+
+#: ../src/artificial_stars.c:2062
+msgid "Sigma of gauss function in px"
+msgstr "Сигма гауссовой функции в точках растра"
+
+#: ../src/artificial_stars.c:2068
+msgid "Stars with diffraction lines:"
+msgstr "Звёзд с дифракц. линиями:"
+
+#: ../src/artificial_stars.c:2070
+msgid "Percentage of stars that have diffraction lines"
+msgstr "Процент звёзд с дифракционными линиями"
+
+#: ../src/artificial_stars.c:2077
+msgid "Diffraction angle:"
+msgstr "Дифракционный угол:"
+
+#: ../src/artificial_stars.c:2079
+msgid "Angle of diffraction lines in degrees"
+msgstr "Угол дифракционных линий в градусах"
+
+#: ../src/artificial_stars.c:2085
+msgid "Diffraction length:"
+msgstr "Дифракционная длина:"
+
+#: ../src/artificial_stars.c:2087
+msgid "Length of diffraction lines"
+msgstr "Длина дифракционных линий"
+
+#: ../src/artificial_stars.c:2093
+msgid "Diffraction color:"
+msgstr "Цвет дифракции:"
+
+#: ../src/artificial_stars.c:2095
+msgid "Diffraction lines usually show a color variation"
+msgstr "У дифракционных линий обычно меняющийся цвет"
+
+#: ../src/artificial_stars.c:2101 ../src/artificial_galaxy.c:2387
+msgid "Noise:"
+msgstr "Шум:"
+
+#: ../src/artificial_stars.c:2103 ../src/artificial_galaxy.c:2389
+#, c-format
+msgid "Noise in % of sqrt(N) = photon noise"
+msgstr "Шум в процентах от sqrt(N) = фотонный шум"
+
+#: ../src/artificial_stars.c:2109
+msgid "Background:"
+msgstr "Фон:"
+
+#: ../src/artificial_stars.c:2111
+msgid "Background pixel value offset"
+msgstr "Смещение значения фоновых точек растра"
+
+#: ../src/artificial_stars.c:2117
+msgid "Burn out:"
+msgstr "Выгоревших звёзд:"
+
+#: ../src/artificial_stars.c:2119
+#, c-format
+msgid ""
+"% of stars that burn out (0=normalize to brightest star, 100=to darkest one)"
+msgstr ""
+"Процент выгоревших звёзд (0 нормирует до самой яркой звезды, 100 — до самой "
+"тёмной)"
+
+#: ../src/artificial_stars.c:2126
+msgid "Shininess:"
+msgstr "Сияние звёзд:"
+
+#: ../src/artificial_stars.c:2128
+msgid "Burnt out stars have larger sigma"
+msgstr "У выгоревших звёзд большее значение сигмы"
+
+#: ../src/artificial_stars.c:2133
+msgid "Split foreground, object and background to layers"
+msgstr "Разделить звёзды по слоям (задний план, передний план, основные)"
+
+#: ../src/artificial_stars.c:2140
+msgid "Create an illumination mask"
+msgstr "Создать маску освещения"
+
+#: ../src/artificial_galaxy.c:478
+msgid "Create an artificial galaxy"
+msgstr "Создать искусственную галактику"
+
+#: ../src/artificial_galaxy.c:479
+msgid "This plug-in creates an artificial galaxy."
+msgstr "Это дополнение рисует искусственное изображение галактики"
+
+#: ../src/artificial_galaxy.c:483 ../src/artificial_galaxy.c:2288
+msgid "Artificial Galaxy"
+msgstr "Искусственная галактика"
+
+#: ../src/artificial_galaxy.c:1395
+msgid "Creating bulge / ellipse..."
+msgstr "Создание балджа или эллипса)…"
+
+#: ../src/artificial_galaxy.c:1407
+msgid "Creating bright objects (1)..."
+msgstr "Создание ярких объектов (1)…"
+
+#: ../src/artificial_galaxy.c:1412
+msgid "Creating bright objects (2)..."
+msgstr "Создание ярких объектов (2)…"
+
+#: ../src/artificial_galaxy.c:1417
+msgid "Creating bright objects (3)..."
+msgstr "Создание ярких объектов (3)…"
+
+#: ../src/artificial_galaxy.c:1422
+msgid "Creating dark objects..."
+msgstr "Создание тёмных объектов…"
+
+#: ../src/artificial_galaxy.c:1432
+msgid "Normalizing image..."
+msgstr "Нормируется изображение"
+
+#: ../src/artificial_galaxy.c:1484
+msgid "Artificial galaxy"
+msgstr "Искусственная галактика"
+
+#: ../src/artificial_galaxy.c:1645 ../src/artificial_galaxy.c:1851
+msgid "Bright objects (1):"
+msgstr ""
+
+#: ../src/artificial_galaxy.c:1655 ../src/artificial_galaxy.c:1861
+msgid "Bright objects (1) color"
+msgstr ""
+
+#: ../src/artificial_galaxy.c:1671 ../src/artificial_galaxy.c:1877
+msgid "Bright objects (2):"
+msgstr ""
+
+#: ../src/artificial_galaxy.c:1681 ../src/artificial_galaxy.c:1887
+msgid "Bright objects (2) color"
+msgstr ""
+
+#: ../src/artificial_galaxy.c:1697 ../src/artificial_galaxy.c:1903
+msgid "Bright objects (3):"
+msgstr ""
+
+#: ../src/artificial_galaxy.c:1707 ../src/artificial_galaxy.c:1913
+msgid "Bright objects (3) color"
+msgstr ""
+
+#: ../src/artificial_galaxy.c:1723 ../src/artificial_galaxy.c:1929
+msgid "Dark objects:"
+msgstr "Тёмные объекты:"
+
+#: ../src/artificial_galaxy.c:1733 ../src/artificial_galaxy.c:1939
+msgid "Dark objects color"
+msgstr ""
+
+#: ../src/artificial_galaxy.c:1750 ../src/artificial_galaxy.c:1956
+msgid "Logarithmic spiral"
+msgstr "Логарифмическая спираль"
+
+#: ../src/artificial_galaxy.c:1751 ../src/artificial_galaxy.c:1957
+msgid "Archimedic spiral"
+msgstr "Архимедова спираль"
+
+#: ../src/artificial_galaxy.c:1752 ../src/artificial_galaxy.c:1958
+msgid "Circles"
+msgstr "Круги"
+
+#: ../src/artificial_galaxy.c:1761 ../src/artificial_galaxy.c:1967
+msgid "Bulge radius:"
+msgstr "Радиус балджа:"
+
+#: ../src/artificial_galaxy.c:1763 ../src/artificial_galaxy.c:1969
+msgid "Radius of the bulge, measured in percents of the image size"
+msgstr "Радиус балджа в процента от размера изображения"
+
+#: ../src/artificial_galaxy.c:1767 ../src/artificial_galaxy.c:1973
+msgid "Bulge color:"
+msgstr "Цвет балджа:"
+
+#: ../src/artificial_galaxy.c:1776 ../src/artificial_galaxy.c:1982
+#: ../src/artificial_galaxy.c:2089
+msgid "K"
+msgstr "К"
+
+#: ../src/artificial_galaxy.c:1782 ../src/artificial_galaxy.c:1988
+msgid "Spiral radius:"
+msgstr "Радиус спирали:"
+
+#: ../src/artificial_galaxy.c:1784 ../src/artificial_galaxy.c:1990
+msgid "Radius of the spiral, measured in percents of the image size"
+msgstr "Радиус спирали в процента от размера изображения"
+
+#: ../src/artificial_galaxy.c:1789 ../src/artificial_galaxy.c:1995
+msgid "Spiral thickness:"
+msgstr "Толщина спирали:"
+
+#: ../src/artificial_galaxy.c:1791 ../src/artificial_galaxy.c:1997
+msgid "Thickness sigma of the spiral, measured in percents of the image size"
+msgstr ""
+
+#: ../src/artificial_galaxy.c:1796 ../src/artificial_galaxy.c:2002
+msgid "Spiral turns:"
+msgstr "Вращений спирали:"
+
+#: ../src/artificial_galaxy.c:1798 ../src/artificial_galaxy.c:2004
+msgid "How often the spirals turn around"
+msgstr "Как часто спирали делают оборот"
+
+#: ../src/artificial_galaxy.c:1803 ../src/artificial_galaxy.c:2009
+msgid "Spiral randomness:"
+msgstr "Случайность спирали:"
+
+#: ../src/artificial_galaxy.c:1805 ../src/artificial_galaxy.c:2011
+msgid "Randomness of the spiral"
+msgstr ""
+
+#: ../src/artificial_galaxy.c:1810 ../src/artificial_galaxy.c:2016
+msgid "Angle randomness:"
+msgstr "Случайность угла:"
+
+#: ../src/artificial_galaxy.c:1812 ../src/artificial_galaxy.c:2018
+msgid "Randomness of the angle"
+msgstr ""
+
+#: ../src/artificial_galaxy.c:1817 ../src/artificial_galaxy.c:2023
+msgid "Radius randomness:"
+msgstr "Случайность радиуса:"
+
+#: ../src/artificial_galaxy.c:1819 ../src/artificial_galaxy.c:2025
+msgid "Randomness of the radius"
+msgstr ""
+
+#: ../src/artificial_galaxy.c:1824 ../src/artificial_galaxy.c:2030
+msgid "Spiral lumpiness:"
+msgstr ""
+
+#: ../src/artificial_galaxy.c:1826 ../src/artificial_galaxy.c:2032
+msgid "Lumpiness of the spiral"
+msgstr ""
+
+#: ../src/artificial_galaxy.c:1831 ../src/artificial_galaxy.c:2037
+msgid "Disc lumpiness:"
+msgstr ""
+
+#: ../src/artificial_galaxy.c:1833 ../src/artificial_galaxy.c:2039
+msgid "Lumpiness of the disc"
+msgstr ""
+
+#: ../src/artificial_galaxy.c:2056
+msgid "Radius:"
+msgstr "Радиус:"
+
+#: ../src/artificial_galaxy.c:2058
+msgid "Radius of the elliptical galaxy, measured in percents of the image size"
+msgstr ""
+
+#: ../src/artificial_galaxy.c:2064
+msgid "Excentricity:"
+msgstr "Внецентренность:"
+
+#: ../src/artificial_galaxy.c:2066
+msgid "Numerical excentricity of the elliptical galaxy"
+msgstr ""
+
+#: ../src/artificial_galaxy.c:2072
+msgid "Boxy - Disky:"
+msgstr "Балдж или эллипс:"
+
+#: ../src/artificial_galaxy.c:2074
+msgid "a4 parameter, dr=a4*cos(4*t). a4<0 is boxy, a4>0 is disky"
+msgstr ""
+
+#: ../src/artificial_galaxy.c:2079
+msgid "Color:"
+msgstr "Цвет:"
+
+#: ../src/artificial_galaxy.c:2319
+msgid "Rendering Options"
+msgstr "Параметры отрисовки"
+
+#: ../src/artificial_galaxy.c:2331
+msgid "Object center (X, Y):"
+msgstr "Центр объекта (X, Y):"
+
+#: ../src/artificial_galaxy.c:2347
+msgid "Phi:"
+msgstr "δ (фи):"
+
+#: ../src/artificial_galaxy.c:2349
+msgid "Rotation inside galaxy plane"
+msgstr "Вращение внутри плоскости галактики"
+
+#: ../src/artificial_galaxy.c:2395
+msgid "Multiplier:"
+msgstr "Множитель:"
+
+#: ../src/artificial_galaxy.c:2397
+msgid "Multiply with value"
+msgstr "Умножить на это значение"
+
+#: ../src/artificial_galaxy.c:2488
+msgid "Galaxy type:"
+msgstr "Тип галактики"
+
+#. _("Spiral galaxy"), GALAXY_SPIRAL,
+#. _("Spiral barred galaxy"), GALAXY_SPIRALBARRED,
+#: ../src/artificial_galaxy.c:2496
+msgid "Elliptical galaxy"
+msgstr "Эллиптическая галактика"
+
+#: ../src/artificial_galaxy.c:2507
+msgid "Galaxy Settings"
+msgstr "Параметры галактики"
+
+#: ../src/star_rounding.c:173
+msgid "Rounds longish stars"
+msgstr "Округлить длинноватые звёзды"
+
+#: ../src/star_rounding.c:174
+msgid ""
+"This plug-in applies different calculations to each pixel, resulting in "
+"rounded stars."
+msgstr ""
+"Это дополнение применяет различные вычисления к каждому пикселу, давая более "
+"округлые звёзды."
+
+#: ../src/star_rounding.c:178
+msgid "Round Stars"
+msgstr "Округлить звёзды"
+
+#: ../src/star_rounding.c:592
+msgid "Round stars..."
+msgstr "Округлить звёзды..."
+
+#: ../src/star_rounding.c:721
+msgid "Rounds Stars"
+msgstr "Округлить звёзды"
+
+#. Radial correction
+#: ../src/star_rounding.c:747
+msgid "Radial Correction"
+msgstr "Радиальная коррекция"
+
+#: ../src/star_rounding.c:759
+msgid "Maximum length:"
+msgstr "Макс. длина:"
+
+#: ../src/star_rounding.c:761 ../src/star_rounding.c:829
+msgid "Length of the blurred stars"
+msgstr "Длина размытых звёзд"
+
+#: ../src/star_rounding.c:770 ../src/star_rounding.c:847
+msgid "Replace pixel value by <percentage> of new pixel value"
+msgstr "Заменить значение точки растра на <процент> нового значения"
+
+#: ../src/star_rounding.c:791
+msgid "* x^3 + "
+msgstr "* x^3 + "
+
+#: ../src/star_rounding.c:800
+msgid "* x^2 + "
+msgstr "* x^2 + "
+
+#: ../src/star_rounding.c:809
+msgid "* x"
+msgstr "* x"
+
+#. Linear correction
+#: ../src/star_rounding.c:815
+msgid "Linear Correction"
+msgstr "Линейная коррекция"
+
+#: ../src/star_rounding.c:827
+msgid "Length:"
+msgstr "Длина:"
+
+#: ../src/star_rounding.c:836
+msgid "Angle:"
+msgstr "Угол:"
+
+#: ../src/star_rounding.c:838
+msgid "Angle of the blurred stars"
+msgstr "Угол размытых звёзд"
+
+#. Replace method
+#: ../src/star_rounding.c:854
+msgid "Replacement Method"
+msgstr "Способ замещения"
+
+#: ../src/star_rounding.c:865
+msgid "Minimum of pixels 0 and 1"
+msgstr "Минимум из пикселов 0 и 1"
+
+#: ../src/star_rounding.c:866
+msgid "Minimum of pixels 0-4"
+msgstr "Минимум из пикселов 0-4"
+
+#: ../src/star_rounding.c:867
+msgid "Minimum of pixel 0 and mean value of pixels 1-4"
+msgstr "Минимум из пикселов 0 и среднего значения пикселов 1-4"
+
+#: ../src/star_rounding.c:868
+msgid "Maximum of pixels 0 and 1"
+msgstr "Максимум из пикселов 0 и 1"
+
+#: ../src/star_rounding.c:869
+msgid "Maximum of pixels 0-4"
+msgstr "Максимум из пикселов 0-4"
+
+#: ../src/star_rounding.c:870
+msgid "Maximum of pixel 0 and mean value of pixels 1-4"
+msgstr "Минимум из пикселов 0 и среднего значения пикселов 1-4"
+
+#. RGB or brightness ?
+#: ../src/star_rounding.c:881
+msgid "Treat colors seperately (instead of brightness)"
+msgstr "Работать с цветами раздельно (вместо яркости)"
+
+#: ../src/star_rounding.c:889
+msgid "Threshold:"
+msgstr "Порог:"
+
+#: ../src/star_rounding.c:891
+msgid ""
+"Replace pixel value only if above threshold (for minimum) or below "
+"threshowld (for maximum)"
+msgstr ""
+"Заменить значение пиксела выше порога (для минимума) или ниже порога (для "
+"максимума)"
+
+#: ../scripts/border_information.scm.h:1
+msgid "Bottom information height"
+msgstr ""
+
+#: ../scripts/border_information.scm.h:2
+msgid "Draw Border with Image Information"
+msgstr ""
+
+#: ../scripts/border_information.scm.h:3
+msgid ""
+"Draw a border around an image and some information about it image in the "
+"bottom"
+msgstr ""
+
+#: ../scripts/border_information.scm.h:4
+msgid "Font"
+msgstr "Шрифт"
+
+#: ../scripts/border_information.scm.h:5
+msgid "Font Color"
+msgstr "Цвет шрифта"
+
+#: ../scripts/border_information.scm.h:6
+msgid "Font size (left, first line)"
+msgstr ""
+
+#: ../scripts/border_information.scm.h:7
+msgid "Font size (left, second line)"
+msgstr ""
+
+#: ../scripts/border_information.scm.h:8
+msgid "Font size (middle, first line)"
+msgstr ""
+
+#: ../scripts/border_information.scm.h:9
+msgid "Font size (middle, second line)"
+msgstr ""
+
+#: ../scripts/border_information.scm.h:10
+msgid "Font size (right, first line)"
+msgstr ""
+
+#: ../scripts/border_information.scm.h:11
+msgid "Font size (right, second line)"
+msgstr ""
+
+#: ../scripts/border_information.scm.h:12
+#, fuzzy
+msgid "Gauss Radius"
+msgstr "Аппроксимация по Гауссу"
+
+#: ../scripts/border_information.scm.h:13
+msgid "Inner border color"
+msgstr ""
+
+#: ../scripts/border_information.scm.h:14
+msgid "Inner border size"
+msgstr ""
+
+#: ../scripts/border_information.scm.h:15
+msgid "Outer border color"
+msgstr ""
+
+#: ../scripts/border_information.scm.h:16
+msgid "Outer border size"
+msgstr ""
+
+#: ../scripts/border_information.scm.h:17
+msgid "Text (left, first line)"
+msgstr ""
+
+#: ../scripts/border_information.scm.h:18
+msgid "Text (left, second line)"
+msgstr ""
+
+#: ../scripts/border_information.scm.h:19
+msgid "Text (middle, first line)"
+msgstr ""
+
+#: ../scripts/border_information.scm.h:20
+msgid "Text (middle, second line)"
+msgstr ""
+
+#: ../scripts/border_information.scm.h:21
+msgid "Text (right, first line)"
+msgstr ""
+
+#: ../scripts/border_information.scm.h:22
+msgid "Text (right, second line)"
+msgstr ""
+
+#: ../scripts/brightness_contrast_batch.scm.h:1
+msgid "Apply the Brightness/Contrast tool to all layers in an image"
+msgstr ""
+
+#: ../scripts/brightness_contrast_batch.scm.h:2
+msgid "Brightness"
+msgstr "Яркость"
+
+#: ../scripts/brightness_contrast_batch.scm.h:3
+msgid "Contrast"
+msgstr "Контраст"
+
+#: ../scripts/brightness_contrast_batch.scm.h:4
+msgid "Set Brightness and Contrast for all Layers"
+msgstr ""
+
+#: ../scripts/brightness_contrast_batch.scm.h:5
+#: ../scripts/dark_subtraction.scm.h:3 ../scripts/flat_division.scm.h:3
+#: ../scripts/mode_batch.scm.h:25 ../scripts/normalize_batch.scm.h:3
+msgid "Visible layers only"
+msgstr "Только видимые слои"
+
+#: ../scripts/dark_subtraction.scm.h:1
+msgid "Subtract Dark Frame from all Layers"
+msgstr ""
+
+#: ../scripts/dark_subtraction.scm.h:2
+msgid "Subtract a dark frame from all layers"
+msgstr ""
+
+#: ../scripts/flat_division.scm.h:1
+msgid "Divide all Layers by Flat Field"
+msgstr ""
+
+#: ../scripts/flat_division.scm.h:2
+msgid "Divides all layers by a flat field"
+msgstr ""
+
+#: ../scripts/mode_batch.scm.h:1
+msgid "Addition"
+msgstr "Добавление"
+
+#: ../scripts/mode_batch.scm.h:2
+msgid "Burn"
+msgstr "Затемнить"
+
+#: ../scripts/mode_batch.scm.h:3
+msgid "Color"
+msgstr "Цвет"
+
+#: ../scripts/mode_batch.scm.h:4
+msgid "Darken Only"
+msgstr ""
+
+#: ../scripts/mode_batch.scm.h:5
+msgid "Difference"
+msgstr "Разница"
+
+#: ../scripts/mode_batch.scm.h:6
+msgid "Divide"
+msgstr "Деление"
+
+#: ../scripts/mode_batch.scm.h:7
+msgid "Dodge"
+msgstr "Осветлить"
+
+#: ../scripts/mode_batch.scm.h:8
+msgid "Grain extract"
+msgstr "Извлечение зерна"
+
+#: ../scripts/mode_batch.scm.h:9
+msgid "Grain merge"
+msgstr "Объединение зерна"
+
+#: ../scripts/mode_batch.scm.h:10
+msgid "Hard Light"
+msgstr "Жёсткий свет"
+
+#: ../scripts/mode_batch.scm.h:11
+msgid "Hue"
+msgstr "Тон"
+
+#: ../scripts/mode_batch.scm.h:12
+msgid "Lighten Only"
+msgstr ""
+
+#: ../scripts/mode_batch.scm.h:13
+msgid "Mode"
+msgstr "Режим"
+
+#: ../scripts/mode_batch.scm.h:14
+#, fuzzy
+msgid "Multiply"
+msgstr "Умножить:"
+
+#: ../scripts/mode_batch.scm.h:15
+msgid "Normal"
+msgstr "Обычный"
+
+#: ../scripts/mode_batch.scm.h:16
+msgid "Opacity"
+msgstr "Непрозрачность"
+
+#: ../scripts/mode_batch.scm.h:17
+msgid "Overlay"
+msgstr "Перекрытие"
+
+#: ../scripts/mode_batch.scm.h:18
+msgid "Saturation"
+msgstr "Насыщенность"
+
+#: ../scripts/mode_batch.scm.h:19
+msgid "Screen"
+msgstr "Экран"
+
+#: ../scripts/mode_batch.scm.h:20
+msgid "Set Mode for all Layers"
+msgstr ""
+
+#: ../scripts/mode_batch.scm.h:21
+msgid "Set a particular blending mode and opacity to all layers"
+msgstr ""
+
+#: ../scripts/mode_batch.scm.h:22
+msgid "Soft Light"
+msgstr "Мягкий свет"
+
+#: ../scripts/mode_batch.scm.h:23
+msgid "Subtract"
+msgstr "Вычитание"
+
+#: ../scripts/mode_batch.scm.h:24
+msgid "Value"
+msgstr "Значение"
+
+#: ../scripts/normalize_batch.scm.h:1
+#, fuzzy
+msgid "Apply the normalize function to all layers"
+msgstr "Нормировать все слои"
+
+#: ../scripts/normalize_batch.scm.h:2
+#, fuzzy
+msgid "Normalize all Layers"
+msgstr "Нормировать все слои"
+
+#~ msgid "Standard (LD)"
+#~ msgstr "Обычное (НП)"
+
+#~ msgid "Globular cluster (LD)"
+#~ msgstr "Шаровидное скопление (НП)"
+
+#~ msgid "Open cluster (LD)"
+#~ msgstr "Рассеянное скопление (НП)"
+
+#~ msgid "Create Artificial Stars"
+#~ msgstr "Создать искусственные звёзды"
+
+#~ msgid "Create Artificial Galaxy"
+#~ msgstr "Создать искусственную галактику"
+
+#~ msgid "Align"
+#~ msgstr "Выровнять"
+
+#~ msgid "Cross correlation search area, of course limited by layer border"
+#~ msgstr ""
+#~ "Область поиска взаимной корреляции в процентах от высоты и ширины "
+#~ "выделения, ограниченная пределами слоя"
+
+#~ msgid "Merge"
+#~ msgstr "Объединить"
+
+#~ msgid "Multiply before processing:"
+#~ msgstr "Умножить перед обработкой:"
+
+#~ msgid "Add constant before processing:"
+#~ msgstr "Добавить константу перед обработкой:"
+
+#~ msgid "Create gradient"
+#~ msgstr "Создать градиент"
+
+#~ msgid "Use percentage:"
+#~ msgstr "С процентом:"
+
+#~ msgid "Cre_ate"
+#~ msgstr "_Создать"
+
+#~ msgid "Number:"
+#~ msgstr "Число:"
+
+#~ msgid "Create"
+#~ msgstr "Создать"
+
+#~ msgid "Object distribution:"
+#~ msgstr "Распределение объекта:"
+
+#~ msgid "Star rounding"
+#~ msgstr "Округлить звёзды"

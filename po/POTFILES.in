@@ -1,0 +1,14 @@
+# List of source files containing translatable strings.
+
+src/alignment.c
+src/merge.c
+src/background_gradient.c
+src/artificial_stars.c
+src/artificial_galaxy.c
+src/star_rounding.c
+scripts/border_information.scm
+scripts/brightness_contrast_batch.scm
+scripts/dark_subtraction.scm
+scripts/flat_division.scm
+scripts/mode_batch.scm
+scripts/normalize_batch.scm
