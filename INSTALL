@@ -1,0 +1,35 @@
+gimp-plugin-astronomy (c) 2006-2018 by Georg Hennig <georg.hennig@web.de>, published under GPL.
+
+LINUX
+=====
+To install gimp-plugin-astronomy on Linux systems, please install gimp*-dev package, gsl-dev package,
+make and gcc (this should also install the necessary packages gtk*-dev, glib*-dev, etc.).
+Then do
+	tar -xvjf gimp-plugin-astronomy-VERSION.tar.bz2
+	cd gimp-plugin-astronomy-VERSION
+	./configure
+	make
+	su
+	<password>
+	make install
+
+WINDOWS
+=======
+To install gimp-plugin-astronomy on Windows systems, copy all folders containing plug-in files to
+C:\Program Files\GIMP 2\lib\gimp\2.0\plug-ins
+and all files inside "scripts" to
+C:\Program Files\GIMP 2\share\gimp\2.0\scripts
+
+To have translated messages, please copy the folder "lib" into C:\Program Files\GIMP 2\lib\gimp\2.0\plug-ins.
+If building from sources, copy the file "<lang>.gmo" to "lib/.../locale/<lang>/LC_MESSAGES/gimp-plugin-astronomy.mo"
+
+The plugins are available under Filters->Astronomy-><Plugin-Name>
+
+To build the plug-ins on Windows, follow the install and build instruction for MSYS2 on
+https://wiki.gimp.org/wiki/Hacking:Building/Windows
+
+Then run inside the gimp-plugin-astronomy-VERSION folder
+LDFLAGS=-mwindows ./configure
+make
+
+and copy manually the resulting src/*exe files to the plug-ins folder (see above)

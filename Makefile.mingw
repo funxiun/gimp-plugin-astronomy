@@ -1,0 +1,83 @@
+VERSION = 0.6
+
+CC = i686-mingw32-gcc
+
+CFLAGS = -O3 -funroll-loops -ffast-math -march=i586 -mwindows -Wall
+
+LIBS = -lgimpui-2.0 \
+	-lgimpwidgets-2.0 \
+	-lgimp-2.0 \
+	-lgimpcolor-2.0 \
+	-lgimpmath-2.0 \
+	-lgimpbase-2.0 \
+	-lgtk-win32-2.0.dll \
+	-lgdk-win32-2.0.dll \
+	-latk-1.0 \
+	-lgdk_pixbuf-2.0 \
+	-lpangocairo-1.0 \
+	-lpango-1.0 \
+	-lcairo \
+	-lgobject-2.0 \
+	-lgmodule-2.0 \
+	-lglib-2.0 \
+	-lintl \
+	-lgsl.dll \
+	-lgslcblas.dll
+
+LIBDIRS = -Lgimp-win32-dev/lib -Lgsl/lib
+
+INCLUDEDIRS = -I. \
+	-Isrc \
+	-I/usr/mingw32/include \
+	-Igimp-win32-dev/include \
+	-Igimp-win32-dev/include/glib-2.0 \
+	-Igimp-win32-dev/lib/glib-2.0/include \
+	-Igimp-win32-dev/include/gtk-2.0 \
+	-Igimp-win32-dev/include/cairo \
+	-Igimp-win32-dev/include/pango-1.0 \
+	-Igimp-win32-dev/lib/gtk-2.0/include \
+	-Igimp-win32-dev/include/atk-1.0 \
+	-Igsl/include \
+	-Ifftw/include
+
+all: config merge alignment background_gradient artificial_stars artificial_galaxy star_rounding strip
+
+clean:
+	rm -f src/*.o src/*.exe src/*~ scripts/*~ *.zip *.tar.gz
+
+config:
+	cp config.h.win32 config.h
+
+dist: all
+	rm -rf *.zip gimp-plugin-astronomy-${VERSION}
+	mkdir gimp-plugin-astronomy-${VERSION} gimp-plugin-astronomy-${VERSION}/plugins gimp-plugin-astronomy-${VERSION}/scripts gimp-plugin-astronomy-${VERSION}/plugins/lib gimp-plugin-astronomy-${VERSION}/plugins/lib/locale gimp-plugin-astronomy-${VERSION}/plugins/lib/locale/de gimp-plugin-astronomy-${VERSION}/plugins/lib/locale/de/LC_MESSAGES
+	cp AUTHORS ChangeLog COPYING INSTALL README TODO doc/documentation.pdf gimp-plugin-astronomy-${VERSION}
+	cp po/de.gmo gimp-plugin-astronomy-${VERSION}/plugins/lib/locale/de/LC_MESSAGES/gimp-plugin-astronomy.mo
+	cp src/*.exe fftw/lib/libfftw3-3.dll gsl/bin/libgsl-0.dll gsl/bin/libgslcblas-0.dll gimp-plugin-astronomy-${VERSION}/plugins
+	cp scripts/*.scm gimp-plugin-astronomy-${VERSION}/scripts
+	zip -9 gimp-plugin-astronomy-${VERSION}.zip gimp-plugin-astronomy-${VERSION}/* gimp-plugin-astronomy-${VERSION}/plugins/* gimp-plugin-astronomy-${VERSION}/scripts/* gimp-plugin-astronomy-${VERSION}/plugins/lib/locale/de/LC_MESSAGES/*
+	rm -rf gimp-plugin-astronomy-${VERSION}
+
+alignment: config src/alignment.o
+	${CC} ${CFLAGS} src/alignment.o -o src/astronomy-alignment.exe ${LIBDIRS} ${LIBS} fftw/lib/libfftw3-3.dll
+
+merge: config src/merge.o
+	${CC} ${CFLAGS} src/merge.o -o src/astronomy-merge.exe ${LIBDIRS} ${LIBS}
+
+background_gradient: config src/background_gradient.o
+	${CC} ${CFLAGS} src/background_gradient.o -o src/astronomy-background-gradient.exe ${LIBDIRS} ${LIBS}
+
+artificial_stars: config src/artificial_stars.o
+	${CC} ${CFLAGS} src/artificial_stars.o -o src/astronomy-artificial-stars.exe ${LIBDIRS} ${LIBS}
+
+artificial_galaxy: config src/artificial_galaxy.o
+	${CC} ${CFLAGS} src/artificial_galaxy.o -o src/astronomy-artificial-galaxy.exe ${LIBDIRS} ${LIBS}
+
+star_rounding: config src/star_rounding.o
+	${CC} ${CFLAGS} src/star_rounding.o -o src/astronomy-star-rounding.exe ${LIBDIRS} ${LIBS}
+
+strip:
+	i686-mingw32-strip --strip-unneeded src/*.exe
+
+%.o: %.c
+	${CC} ${CFLAGS} ${INCLUDEDIRS} -c $< -o $@

@@ -1,0 +1,6 @@
+- update deprecated gimp functions, update to gegl
+- merge: geometric clamp to 1.0 if < 1 (does this happen at all?)
+- all: median / standard deviation / ... from gsl ?
+- align: calculate the quality of an image / sort layers by that quality number
+- star rounding: "intelligent" algorithm, that omits dark stars.
+- complete documentation

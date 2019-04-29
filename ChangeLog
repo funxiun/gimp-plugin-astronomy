@@ -1,0 +1,67 @@
+0.10
+====
+- Updates for gimp 2.10 and current fftw3 and gsl
+- adapted to new windows build system
+
+0.9
+===
+- fixed linking on some Linux systems
+
+0.8
+===
+- further GUI cleanups
+
+0.7
+===
+- GUI cleanup (thanks to Alexandre Prokoudine)
+
+0.6
+===
+- all: documentation
+- artificial galaxy: doesn't need a layer with alpha channel any more
+- artificial stars: ask for recalculation of star distribution if necessary
+- artificial stars: warn (red button) if recalculation of star distribution is necessary
+- artificial stars: GUI fixes
+- border information: Fixed bug preventing it from working
+- background gradient: fixed possible crash with empty boxes
+- star rounding: initial release
+
+0.5
+===
+- all: bug fixes for non-interactive run
+- artificial stars: Sample distribution numbers depend on image size now
+- background gradient: set required minimum points to box width*height, when they are changed
+- background gradient: default values changed
+- artificial galaxy: initial release (elliptical galaxies only)
+- background gradient batch: initial release. Batch process tool for background gradient plugin.
+
+0.4
+===
+- all: bug fixes
+- artificial stars: initial release
+
+0.3
+===
+- all: gnu package with configure, ...
+- all: renamed to gimp-plugin-astronomy
+- all: translated strings, not menus, as script-fu cannot be translated
+- all: gimp 2.4
+- all: removed ccdlib dependency
+- merge: let user choose x sigma
+- merge: arithmetic mean of x sigma around median
+- align: calibration (translate/rotate) (and quality, not yet ready) into one plugin
+- align: align by cross correlation, cross correlation (fft), center of brightness or gaussian fit
+- align: requires fftw3
+
+0.2
+===
+- merge: progress
+- border information: SF-ADJUSTMENT instead of SF-VALUE
+- merge: overflow
+- background gradient: initial release
+- subtract dark / divide flat: set mode to original mode (not to "normal")
+- merge: speed improvement
+
+0.1
+===
+- "real" initial release
